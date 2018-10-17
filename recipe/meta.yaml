@@ -1,5 +1,4 @@
 {% set version = '0.5.0' %}
-
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,20 +9,22 @@ package:
 source:
   fn: highcharter_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/highcharter_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/highcharter/highcharter_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/highcharter_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/highcharter/highcharter_{{ version }}.tar.gz
   sha256: d77ab493f6eb8648b352205df1bf60848c8f2155d46920077bac57809cbbded7
 
 build:
-  number: 0
-  # igraph is not available for windows
-  skip: true  # [win]
+  merge_build_host: True  # [win]
+  number: 1
+  skip: true  # [win32]
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
+    - {{posix}}zip               # [win]
+  host:
     - r-base
     - r-assertthat
     - r-broom
@@ -64,7 +65,7 @@ requirements:
 
 test:
   commands:
-    - $R -e "library('highcharter')"  # [not win]
+    - $R -e "library('highcharter')"           # [not win]
     - "\"%R%\" -e \"library('highcharter')\""  # [win]
 
 about:
@@ -79,3 +80,7 @@ extra:
   recipe-maintainers:
     - johanneskoester
     - bgruening
+    - daler
+    - jdblischak
+    - cbrueffer
+    - dbast
