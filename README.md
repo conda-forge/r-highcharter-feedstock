@@ -5,7 +5,7 @@ Home: http://jkunst.com/highcharter
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: A wrapper for the 'Highcharts' library including shortcut functions to plot R objects. 'Highcharts' <http://www.highcharts.com/> is a charting library offering numerous chart types with a simple configuration syntax.
 
