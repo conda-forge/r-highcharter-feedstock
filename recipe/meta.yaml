@@ -1,4 +1,4 @@
-{% set version = "0.8.2" %}
+{% set version = "0.9.4" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/highcharter_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/highcharter/highcharter_{{ version }}.tar.gz
-  sha256: 19691c553331d5ec97613ee9f4d9ac84fdf56035eda3bb697f780253af8b91c3
+  sha256: 3fa1432c26762b6a53f31424362ce609febe73c6fe89db1e4437cff7a1fbde0b
 
 build:
   merge_build_host: true  # [win]
