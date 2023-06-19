@@ -1,11 +1,11 @@
-About r-highcharter
-===================
+About r-highcharter-feedstock
+=============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-highcharter-feedstock/blob/main/LICENSE.txt)
 
 Home: http://jkunst.com/highcharter
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-highcharter-feedstock/blob/main/LICENSE.txt)
 
 Summary: A wrapper for the 'Highcharts' library including shortcut functions to plot R objects. 'Highcharts' <http://www.highcharts.com/> is a charting library offering numerous chart types with a simple configuration syntax.
 
